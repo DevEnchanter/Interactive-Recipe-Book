@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap');
+
+/* Color scheme and fonts from the provided design */
+:root {
+    --primary-color: #f4a261; /* Sandy brown */
+    --secondary-color: #2a9d8f; /* Persian green */
+    --accent-color: #e76f51; /* Burnt sienna */
+    --background-color: #264653; /* Charcoal */
+    --text-color-light: #fff;
+    --text-color-dark: #333;
+    --font-large: 'Playfair Display', serif;
+    --font-normal: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--font-normal);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color-light);
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar a {
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    transform: scale(1.1);
+    color: var(--accent-color);
+  }
+  
+  .navbar a.active {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+  }
+
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: var(--text-color-light);
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar a {
+      display: none;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    /* Add further styles for the expanded menu */
+  }
+  
+  
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-large);
+    font-size: 2rem;
+    color: var(--text-color-light);
+    
+}
+
+.logo img {
+    height: 100px; /* Adjust this value to suit your design */
+    width: auto; /* This will maintain the aspect ratio of the image */
+    margin-right: 10px;
+}
+
+
+.nav-items a {
+    color: var(--text-color-light);
+    text-decoration: none;
+    margin-left: 2rem;
+}
+
+.nav-items a:hover {
+    color: var(--accent-color);
+}
+
+.hero {
+    padding: 200px 0;
+    background: url('background-image.jpg') center center no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: var(--font-large);
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.search-section {
+    /* Center the form in the section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .search-section form {
+    /* Apply a scale effect on focus */
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .search-section input[type="text"] {
+    /* Bigger size for the input */
+    font-size: 1.25rem;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 0.5rem;
+    transition: transform 0.2s ease-in-out; /* Smooth transition for the transform property */
+  }
+  
+  .search-section input[type="text"]:focus {
+    /* Scale up the input box on focus */
+    transform: scale(1.05);
+    outline: none; /* Remove the default focus outline */
+    border-color: var(--accent-color); /* Change border color on focus */
+  }
+  
+  .search-section button {
+    /* Bigger and more prominent button */
+    font-size: 1.25rem;
+    padding: 0.75rem 1rem;
+    margin-left: 1rem; /* Add some space between the input box and the button */
+    background-color: var(--accent-color);
+    color: var(--text-color-light);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add some shadow for depth */
+    transition: all 0.2s ease-in-out; /* Transition for all properties */
+  }
+  
+  .search-section button:hover {
+    /* Slightly raise the button when hovered */
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Increase the shadow size */
+  }
+  
+
+.about {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: var(--text-color-dark);
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.featured-recipes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.recipe-card {
+    flex-basis: calc(33% - 1rem);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.recipe-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: auto;
+}
+
+.cta {
+    text-align: center;
+    padding: 2rem;
+}
+
+.cta button {
+    padding: 1rem 2rem;
+    background-color: var(--accent-color);
+    color: var(--text-color-light);
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+  
+
+  .cta button:hover {
+    background-color: var(--primary-color);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+  }
+  
+  .cta button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  @media (max-width: 768px) {
+    .cta button {
+      padding: 0.8rem 1.5rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+
+  .cta button.loading {
+    pointer-events: none;
+    color: transparent;
+    background-color: var(--secondary-color);
+    position: relative;
+  }
+  
+  .cta button.loading::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 24px;
+    height: 24px;
+    margin: -12px 0 0 -12px;
+    border-radius: 50%;
+    border: 2px solid var(--text-color-light);
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    text-align: center;
+    padding: 1rem;
+}
+
+@keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .navbar a {
+    animation: slideDown 0.5s ease forwards;
+  }
+  
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 3rem 0;
+    }
+
+    .featured-recipes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recipe-card {
+        flex-basis: 80%;
+    }
+}
