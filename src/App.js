@@ -1,15 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './components/HomePage';
-import AboutPage from './components/AboutPage'; // Create this component
-import ContactPage from './components/ContactPage'; // Create this component
+import RecipeDetail from './components/RecipeDetail';
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/recipe-detail" element={<RecipeDetail />} />
         {/* Add more routes as needed */}
       </Routes>
     </Router>
